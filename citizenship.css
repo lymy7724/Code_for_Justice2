@@ -1,0 +1,367 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+  }
+
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #919191;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  /********** This is only to put a space between the nav bar and footer **********/
+
+  /*Footer*/
+  .footer {
+    /* existing styles */
+    margin-top: 46%;
+  }
+  /********** This is only to put a space between the nav bar and footer **********/
+
+  .navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color:#fff;
+    background-color: #001E57 ;
+    padding: 1%;
+    width: 100%;
+  }
+  .logo{
+    font-size: 1.5rem;
+    margin:.5rem;
+  }
+  .navbar-links ul{
+    margin:0;
+    padding:0;
+    display: flex;
+  }
+  .navbar-links li{
+    list-style-type: none;
+  }
+  .navbar-links li a{
+    text-decoration: none;
+    color:white;
+    padding:1rem;
+    display: block;
+  }
+  .navbar-links li :hover{
+    background-color:rgb(225, 221, 221);
+    color:black;
+    opacity: .4;
+  }
+  /*css for toggle button*/
+  .toggle-button{
+    position:absolute;
+    top: 1.3rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background-color: transparent;
+    border: none;
+  }
+  .toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+  }
+  @media (max-width:580px) {
+  .toggle-button{
+    display: flex;
+  }
+  .navbar-links{
+    display: none;
+    width: 100%;
+  }
+  .navbar{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar-links ul{
+    flex-direction: column;
+    width: 100%;
+  }
+  .navbar-links li{
+    text-align: center;
+  }
+  .navbar-links li a{
+    padding: .5rem 1rem;
+  }
+  .navbar-links.active{
+    display: flex;
+  }
+  }
+  /* css background images*/
+  .background-img{
+    background-image: url(Students.webp);
+    display: flex;
+    justify-content: center;
+    height:auto;
+    padding: 10%;
+    background-attachment: fixed;
+    background-repeat:no-repeat;
+    background-size:cover;
+  }
+  .background-img img{
+    width: 100vw;
+  }
+  img{
+  width: 100%;
+    height:auto;
+    border-radius: 6px;
+  }
+  .background-img h1{
+    font-size: 80px;
+    opacity:.9;
+    color:white;
+  }
+
+  /* this section is for the first image and citizenship title*/
+
+  .citizen-image {
+    text-align: center;
+    margin-top: 0px; 
+    overflow: hidden;
+  }
+  
+  .citizen-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center -30;
+  }
+
+  .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    text-shadow: 0px 4px 4px rgba(0,0,0,.3);
+    font-weight: bold;
+    font-size: 2.125rem;
+    text-transform: uppercase;
+  }
+  
+  .title h2 {
+    margin-bottom: 130%;
+  }
+
+  p {
+    font-size: larger;
+    color: black;
+    margin: 0 auto 1rem auto;
+    text-align: center;
+    max-width: 1200px;
+    margin-top: 5%;
+  }
+
+  p + p {
+    margin-top: 2%; /* space in between both p's */
+  }
+
+  .sevensteps {
+    /*max-width: 800px;*/
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    margin-top: 5%;
+    background-color: #d2d2d2a3;
+  }
+  
+  .step {
+    margin-bottom: 20px;
+  }
+  
+  .step h2 {
+    color: #444444;
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .step p {
+    font-size: 16px;
+    margin-top: 1%;
+  }
+
+  /* this section is for the 7 stepsand dropdown descriptions */
+.accordion {
+  background-color: #d2d2d2a3;
+  color: #444444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.active, .accordion:hover {
+  background-color: #757575a3;
+}
+
+.panel {
+  padding: 0 18px;
+  background-color: #d2d2d2a3;
+  display: none;
+  overflow: hidden;
+}
+
+.accordion:after {
+  content: '\02795'; 
+  font-size: 13px;
+  color: #d2d2d2a3;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2796"; 
+}
+
+
+/* this section is for resources */
+   .resources {
+    margin-top: 7%;
+    color: #000000;
+    text-align: center;
+    font-size: large;
+    border-bottom: 1px solid #000000;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .resource-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    justify-items: center ;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .resource-grid{
+    grid-template-columns: repeat(auto-fit, minimax(150px, 1fr));
+  }
+  
+  .difresources {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .difresources a {
+    text-decoration: none;
+  }
+
+  .difresources h3:hover {
+    text-decoration: underline;
+}
+  
+  .difresources img {
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover;
+  } 
+  
+  .difresources h3 {
+    margin-top: 0;
+    font-weight: bold;
+    color: #57a2ce;
+    text-decoration: none;
+  }
+  
+  .description {
+    color: #333;
+    font-size: medium;
+  }
+
+
+  /*Footer*/
+  .footer {
+    background-color:#001E57;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 10px;
+    
+  }
+
+  .footer .social-icons {
+    margin-top: 20px;
+  }
+
+  .footer .social-icons a {
+    margin-right: 15px;
+  }
+
+  .footer .social-icons img {
+    width: 35px;
+    height: auto;
+  }
+
+.footer-text {
+  color: white;
+}
+
+/* Media queries for phone, tablet, and laptop */ 
+@media (max-width: 768px) { 
+  .container { 
+    padding: 0 10px; 
+  } 
+  
+  .navbar .container { 
+    flex-direction: column; 
+    text-align: center;
+   } 
+   
+   .navbar .logo { 
+    margin-bottom: 10px; 
+  } 
+  
+  .nav-links li { 
+    display: block; 
+    margin: 10px 0; 
+  } 
+  
+  .citizen-image .title { 
+    font-size: 1.5rem; 
+  } 
+} 
+
+@media (max-width: 992px) { 
+  .container { 
+    max-width: 800px; 
+  } 
+}
+ @media (min-width: 1200px) { 
+  .container { 
+    max-width: 100%; 
+  }
+ }
+
+ @media (max-width: 576px)  {
+  .resource-grid {
+    width :90%;
+  }
+ }
