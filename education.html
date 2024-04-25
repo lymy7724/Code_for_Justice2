@@ -9,6 +9,11 @@
     rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
   />
+
+ 
+  <link rel="stylesheet" href="education.css">
+  
+
 </head>
 <body>
 <header>
@@ -21,11 +26,11 @@
      </button>
     <div class="navbar-links">
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#education">Education</a></li>
-            <li><a href="#housing">Housing</a></li>
-            <li><a href="#citizenship">Citizenship</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="education.html" >Education</a></li>
+            <li><a href="housing.html" >Housing</a></li> 
+            <li><a href="citizenship.html" >Citizenship</a></li>
+            <li><a href="contact.html" >Contact</a></li>
         </ul>
     </div>
 
@@ -75,17 +80,19 @@
     <button class="donate-btn">$25</button>
     <h5>Volunteer</h5>
     
-    <input type="text" name="name" placeholder="First and Last name">
+    <input type="text" name="name" placeholder="First and Last name" id="education-input">
     <label for="email"></label>
-    <input for="email" type="email" placeholder="email">
-    <button type="submit" class="submit-btn">Submit</button>
+    <input for="email" type="email" placeholder="email" id="education-input">
+    <button type="submit" class="education-submit">Submit</button>
   </form>
   </div>
   <footer class="footer">
     <div class="container">
       <p>&copy; 2024 Immigrant REBL. All rights reserved.</p>
       <div class="social-icons">
-
+        <a href="https://www.instagram.com/" target="_blank"><img src="instagram.svg" alt="Instagram"></a>
+        <a href="https://www.facebook.com/" target="_blank"><img src="facebook.svg" alt="Facebook"></a>
+        <a class = "twitter" href="https://twitter.com" target="_blank"><img src="twitter.svg" alt="Twitter"></a>
       </div>
     </div>
   </footer>
@@ -93,5 +100,8 @@
 
 
     <script src="education.js" defer></script>
+   
+    
+
 </body>
 </html>
