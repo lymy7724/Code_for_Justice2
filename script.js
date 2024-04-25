@@ -1,3 +1,5 @@
+
+
 // picture gallery on homepage 
 
 let slideIndex = 1;
@@ -45,6 +47,8 @@ function validateForm() {
     let y = document.forms["myForm"]["phonenumb"].value;
     let z = document.forms["myForm"]["email"].value;
 
+
+    // if there isnt a name, then it sets the errors to true and adds error message
     if (!x) {
         hasErrors = true;
         // alert("Your name must be filled out");
@@ -53,7 +57,7 @@ function validateForm() {
         errorMessage += "Your name must be filled out. ";
 
     }
-
+    // if there isnt a phone number, then it sets the errors to true and adds error message
     if (!y) {
         hasErrors = true;
         var element = document.getElementById("phone");
@@ -63,23 +67,28 @@ function validateForm() {
 
     }
 
-    // optional chaining -> ?
-    if (!(y?.includes("(") && y?.includes(")") && y?.includes("-"))) {
+    // if phone number doesn't include () & -, it sets the errors to true and adds the error message
+    if (!y.includes("(") ||
+        !y.includes(")") ||
+        !y.includes("-") ||
+        y.length !== 13
+    ) {
         hasErrors = true;
-        var element = document.getElementById("email");
-        element.classList.add("error");
-        errorMessage += "Phone number must be in the correct format. "
+        errorMessage += "Make sure phone number is in the correct format. ";
+
+
     }
 
+    // if there isnt an email, then it sets the errors to true and adds error message
     if (!z) {
         hasErrors = true;
-        var element = document.getElementById("name");
+        var element = document.getElementById("email");
         element.classList.add("error");
         errorMessage += "Your email must be filled out. ";
         // alert("Your email must be filled out")
 
     };
-
+    // if there is an error, it will alert an error message
     if (hasErrors) {
         alert(errorMessage);
         return false;
