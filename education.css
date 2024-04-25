@@ -15,7 +15,7 @@ body{
   justify-content: space-between;
   align-items: center;
   color:#fff;
-  background-color:#007bff ;
+  background-color:#001e57 ;
   padding: 1%;
   width: 100%;
 }
@@ -42,11 +42,7 @@ body{
   display: block;
 }
 
-.navbar-links li :hover{
-  background-color:rgb(225, 221, 221);
-  color:black;
-  opacity: .4;
-}
+
 /*css for toggle button*/
 .toggle-button{
   position:absolute;
@@ -235,16 +231,44 @@ width: 100%;
 
 
 /*footer styling*/
-.footer {
+/* .footer {
   background-color:#007bff;
   color: #fff;
   text-align: center;
   padding: 20px 0;
   position:fixed ;
   bottom: 0;
-  width: 100%;
+  width: 100%;} */
 
-}
+  .footer {
+    background-color:#001e57;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  .footer .social-icons {
+    margin-top: 20px;
+  }
+
+  .footer .social-icons a {
+    margin-right: 15px;
+  }
+
+  .footer .social-icons img {
+    width: 35px;
+    height: auto;
+  }
+  .results {
+    text-align: center; /* Center-align the text inside the results container */
+  }
+  .results ul {
+    list-style-type: none; /* list-style Removes default list styles */
+    margin-top: 15px; /* Add margin to the top of the list */
+  }
+
+
+
 
 .footer .social-icons {
   margin-top: 20px;
